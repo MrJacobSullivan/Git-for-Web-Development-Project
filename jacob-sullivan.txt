@@ -1,3 +1,5 @@
+https://codepen.io/MrJacobSullivan/pen/powjzPK
+
 1. What is Semantic HTML?  
 Semantic HTML tags are used to better describe the code in the HTML document. This allows for the code to be understood more easilly by computers and programmers alike. It is suggested to use semantic HTML tags in place of using div tags everywhere.
 
