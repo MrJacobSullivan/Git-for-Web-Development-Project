@@ -1,4 +1,4 @@
-https://codepen.io/MrJacobSullivan/pen/powjzPK
+Link to the codepen project: https://codepen.io/MrJacobSullivan/pen/powjzPK
 
 1. What is Semantic HTML?  
 Semantic HTML tags are used to better describe the code in the HTML document. This allows for the code to be understood more easilly by computers and programmers alike. It is suggested to use semantic HTML tags in place of using div tags everywhere.
@@ -13,7 +13,7 @@ An attribute is a way to supply data to an HTML element. An attribute goes in th
 An h1 tag denotes the most important headline on a webpage. It should only be used once in a single HTML document.
 
 5. Name two tags that have required attributes?  
-A tags require an href attribute and img tags require a src attribute.
+a tags require an href attribute and img tags require a src attribute.
 
 6. What do we put in the head of our HTML document?  
 The head of an HTML document is where we put the title for the webpage, meta information used by web browsers, and links to css and javascript files.
@@ -22,7 +22,7 @@ The head of an HTML document is where we put the title for the webpage, meta inf
 An id is an attribute whose value is used to identify a single element on a page.
 
 8. What elements can I add an id to?  
-You can add an id to any element.
+You can add an id to any element as long as the id is only used once.
 
 9. How many times can I use the same id on a page?  
 You can only add the same id to a single element on a page.
@@ -40,10 +40,10 @@ You can add the same class to as many elements as you need.
 Add the following attribute and value to the a tag: target="_blank"
 
 14. What is the alt attribute in the image tag used for?  
-The alt attribute in an image tag is used to provide alternative text to display in case the image does not load and to allow for screenreading software to describe the image.
+The alt attribute in an img tag is used to provide alternative text to display in case the image does not load and to allow for screenreading software to describe the image to those who cannot see the image.
 
 15. How do I reference an id?  
-Reference an id by using a octothorpe followed by the name of the id: #my_id
+Reference an id by using a octothorpe followed by the name of the id: #my-id
 
 16. What is the difference between a section and a div?  
 The contents of a section are grouped and relate to a single theme or idea. A div has no meaning and is just used to give the document structure.
@@ -51,22 +51,24 @@ The contents of a section are grouped and relate to a single theme or idea. A di
 17. What is CSS used for?  
 CSS is used to style a webpage.
 
-18. How to we select an element? Example - every h2 on the page?  
+18. How do we select an element? Example - every h2 on the page?  
 Simply write the tag of the elements you want to select:
 h2 {
 }
 
 19. What is the difference between a class and an id? - Give me an example of when I might use each one?  
-A class can be used to select multiple elements whereas an id can be used to select only one element. You could use a class to change the color of a certain group of paragraphs on a page. You could use an id to change the size of the main image on a page. An id can only be used once per HTML document so any styles you apply to the id will only be applied to the element with that id.
+A class can be used to select multiple elements whereas an id can be used to select only one element. You could use a class to change the color of a certain group of paragraphs on a page. You could use an id to change the size of the main image on a page but nothing else. An id can only be used once per HTML document so any styles you apply to the id will only be applied to the element with that id. Classes can be shared between multiple elements and thus the styles you give to a class will affect all elements with that class.
 
 20. How do we select classes in CSS?  
-Select a class by using a period followed by the name of the class: .my_class
+Select a class by using a period followed by the name of the class: .my-class
 
 21. How do we select a p element with a single class of “human””?  
 Using the followed: p.human
 
 22. What is a parent child selector? When would this be useful?  
-Parent child selectors 
+Parent child selectors are used to select an element that has another element as its parent. It is more specific than just selecting the child element on its own. The parent element is written first followed by the child element separated by a space. For instance, you could want to select all p elements that are in a div element. You could use the following parent child selector:
+div p {
+}
 
 23. How do you select all links within a div with the class of sidebar?  
 Using the following: div.sidebar a
@@ -78,12 +80,13 @@ A pseudo selector is used to apply a style to an element when a certain conditio
 Use the line-height property: line-height: 1.5;
 
 26. What do we use to change the spacing between letters?  
-Use the letter-spacing property: letter-spacing: 1px;
+Use the letter-spacing property: letter-spacing: 2em;
 
 27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?  
 Use the text-transform property: text-transform: uppercase;
 
 28. How do I add a 1px border around my div that is dotted and black?  
+Using the following:
 div {
   border: 1px dotted black;
 }
@@ -108,21 +111,29 @@ rm -f <file-name>
 This action permanently deletes the file from the computer. Files are not recoverable via the Trash folder.
 
 34. Why should I use version control?  
-Version control allows you to keep a central 
+Version control allows you to keep a central log of all the changes you have made to your work. It also allows you to make changes in parallel to the main branch of your work. Version control is extremely important, especially when working on a team, as it allows people to come into a project and see what has been done on the project, when it was done, and by whom. Version control also allows you to walk back changes in the project because previous work isn't lost.
 
 35. How often should I commit to github?  
-You should commit your changes whenever 
+You should commit your work whenever a feature or idea is completed. A general rule of thumb to follow as a beginner is to commit about every 20 minutes or so.
 
 36. What is the command we would use to push our repo up to github?  
 git push -u origin <branch-name>
 
 37. Walk me through Lambda's git flow.  
-Fork the Lambda School project
-Clone your forked repo to your computer
-Checkout a branch called firstName-lastName
-Commit all changes as you work.
-When your work is complete, submit a pull request on GitHub
-Submit link to pull request as the project submission
+  1. Fork the Lambda School Project
+  2. Make sure it forked correctly
+  3. Clone your forked repository to your computer using SSH and the command "git clone <ssh-url-goes-here>"
+  4. cd into the cloned repo
+  5. Make a new branch with your name using the command "git checkout -b jacob-sullivan"
+  6. Make necessary changes to complete the assignment
+  7. Use the "git add .", "git commit -m 'message goes here'", and "git push -u origin jacob-sullivan" commands to frequently commit your changes and push them to GitHub
+  8. Once you have pushed a change to GitHub, you need to submit a pull request from your jacob-sullivan branch to your main branch
+  9. Make sure you select your own main branch and not the original Lambda School branch
+  10. Give the pull request an appropriate name and description and then submit
+  11. Copy the URL of the pull request and submit it in canvas i.e. https://github.com/MrJacobSullivan/Git-Flow-Practice/pull/1
+  12. Continue to make necessary changes until the assignment is completed
+  13. Make sure to commit and push your changes as major features are completed or if you have gone about 20 minutes without commiting and pushing your changes
+  14. Commmits and pushes made to the jacob-sullivan branch will not require a new pull request as long as the pull request has not been merged yet
 
 Stretch Questions
 1. What is the difference between an inline element and a block element?
