@@ -136,8 +136,29 @@ git push -u origin <branch-name>
   14. Commmits and pushes made to the jacob-sullivan branch will not require a new pull request as long as the pull request has not been merged yet
 
 Stretch Questions
-1. What is the difference between an inline element and a block element?
-2. What happens when an element is positioned absolutely?
-3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?
-4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default.
-5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them?
+1. What is the difference between an inline element and a block element?  
+An inline element will only take up the horizontal space required by its content. A block element will take up the entire horizontal space regardless the width of its contents.
+
+2. What happens when an element is positioned absolutely?  
+This means that the element is positioned relative to its closest relative ancestor.
+
+3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?  
+Use the display property inline-block. For example:
+div {
+  display: inline-block;
+  width: 64px;
+}
+
+4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default.  
+block:
+  div
+  h1
+  section
+inline:
+  span
+  a
+inline-block:
+  button
+
+5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them?  
+The box model is how we describe how much space an element should take up. We can control the dimensions of the content, the amount of space between the content and the end of the element, and the amount of space between the element and other elements. Using the box-sizing property as well as percentages instead of absolute values allows us to maintain the correct relative sizes for our elements.
